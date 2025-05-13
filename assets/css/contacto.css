@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Menú desplegable */
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: 650px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: #2C3A66;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .menu.show {
+        max-height: 500px; /* lo suficientemente alto para mostrar todos los ítems */
+        transition: max-height 0.5s ease-in;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* HEADER */
+
+.contenedor-header {
+    background-color: #2C3A66;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: rgb(243, 244, 245);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #2C3A66;
+    color: #F5F7FA;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.main-contacto {
+    padding-top: 120px;
+    text-align: center;
+    color: #222;
+}
+
+
+
+.contact-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    margin-top: -18px;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#send-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: rgb(103, 103, 221);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: rgb(83, 83, 190);
+}
+
+#errorMessage {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Redes */
+.medios-contacto {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.medios-contacto h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.iconos-redes a {
+    color: rgb(103, 103, 221);
+    font-size: 36px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.iconos-redes a:hover {
+    transform: scale(1.2);
+    color: rgb(83, 83, 190);
+}

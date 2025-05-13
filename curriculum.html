@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <title>Curriculum</title>
+    <link rel="stylesheet" href="./assets/css/curriculum.css">
+    <script src="https://kit.fontawesome.com/29c3be7601.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+</head>
+<body>
+    <header class="contenedor-header">
+        <nav class="navbar">
+        <button class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="sobremi.html">SOBRE MÍ</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="curriculum.html" class="active">CURRÍCULUM</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-curriculum">
+          <h1 class="titulo">Mi currículum</h1>
+          
+          <div class="grid-cv">
+            <div class="preview">
+              <h3 class="vistaPrevia">Vista previa</h3>
+              <embed src="./assets/pdf/CV_MicaelaPasman_.pdf" width="100%" height="500px" class="cv-preview">
+            </div>
+            
+            <div class="descarga">
+              <h3 class="descargarPDF">Descargar PDF</h3>
+              <a href="./assets/pdf/CV_MicaelaPasman_.pdf" target="_blank" class="btn-descargar">
+                <i class="fa-solid fa-file-pdf fa-5x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+    <footer>
+        <p class="derechos">Derechos Reservados <i class="fa-regular fa-copyright"></i></p>
+    </footer>
+</body>
+</html>

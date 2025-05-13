@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="./assets/css/contacto.css">
+    <script src="https://kit.fontawesome.com/29c3be7601.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+</head>
+<body>
+    <header class="contenedor-header">
+        <nav class="navbar">
+        <button class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="sobremi.html">SOBRE MÍ</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="curriculum.html">CURRÍCULUM</a></li>
+            <li><a href="contacto.html" class="active">CONTACTO</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="main-contacto">
+    
+        <section class="contact-form-container">
+            <h2 class="formulario">Formulario de contacto</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i> Enviar
+                </button>
+            </form>
+            <p id="errorMessage"></p>
+        </section>
+    
+        <section class="medios-contacto">
+            <h2>Medios de contacto</h2>
+            <div class="iconos-redes">
+                <a href="https://www.linkedin.com/in/micaela-sol-pasman-609771269/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://web.skype.com/share" target="_blank"><i class="fa-brands fa-skype"></i></a>
+                <a href="https://web.telegram.org/k/" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="derechos">Derechos Reservados <i class="fa-regular fa-copyright"></i></p>
+    </footer> 
+</body>
+</html>
