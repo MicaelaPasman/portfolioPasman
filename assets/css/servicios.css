@@ -49,7 +49,52 @@
         text-align: center;
         padding: 10px 0;
     }
+}@media (max-width: 480px) {
+    .contenedor-header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        color: white;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: #2C3A66;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        z-index: 98;
+    }
+
+    .menu.show {
+        max-height: 500px;
+        transition: max-height 0.5s ease-in;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
 }
+
 
 /* HEADER */
 
