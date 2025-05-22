@@ -49,17 +49,19 @@
         text-align: center;
         padding: 10px 0;
     }
-}@media (max-width: 320px) {
+}@media (max-width: 480px) {
     .contenedor-header {
         position: fixed;
         width: 100%;
     }
 
     .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     }
+
 
     .hamburger {
         display: block;
@@ -69,6 +71,7 @@
 
     .menu {
         flex-direction: column;
+        display: flex;
         background-color: #2C3A66;
         position: absolute;
         top: 60px;
