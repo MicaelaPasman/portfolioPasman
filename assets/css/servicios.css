@@ -13,7 +13,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .navbar {
         justify-content: space-between;
         align-items: center;
