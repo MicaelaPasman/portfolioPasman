@@ -141,7 +141,7 @@ html {
 }
 
 /* RESPONSIVE */
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .contenedor-header {
         position: fixed;
         width: 100%;
