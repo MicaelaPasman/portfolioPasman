@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    const links = menu.querySelectorAll('a');
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+  const links = menu.querySelectorAll('a');
 
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('show');
-    });
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('show');
+    document.body.style.overflow = menu.classList.contains('show') ? 'hidden' : 'auto';
+  });
 
-    // Cierra el menú cuando se hace clic en un enlace
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('show');
-        });
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = 'auto';
     });
+  });
 });
